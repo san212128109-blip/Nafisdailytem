@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - MN Daily Items</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>MN Daily Items - Product</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section id="product-detail">
+        <h2>Product Details</h2>
+        <div class="product-detail"></div>
+    </section>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get('category') || 'All';
+        document.querySelector('.product-detail').innerHTML = `<p>Showing products for <strong>${category}</strong></p>`;
+    </script>
+</body>
+</html>
